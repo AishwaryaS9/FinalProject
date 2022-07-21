@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- header section start -->
+    <header>
+        <nav class="navbar">
+            <a href="/">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+        <div class="scroll-bar"></div>
+    </header>
+    <!-- header section ends -->
+
+    <!--Login section starts-->
+    <div class="login-container">
+        <form action="/login" method="POST">
+            <div class="center">
+                <h1>Log In</h1>
+            </div>
+            <i class="far fa-user"></i>
+            <input type="text" name="username" placeholder="Username" id="exampleInputEmail1" required class="box">
+            <input type="password" placeholder="Password" name="password" id="exampleInputPassword1" required
+                class="box">
+            <div class="center">
+                <button class="btn" type="submit">Login</button>
+            </div>
+            <p>don't have an account? <a href="/register">sign up</a></p>
+
+        </form>
+    </div>
+    <!-- Login section ends -->
+
+    <div class="footer">
+        created by <a href="#">Aishwarya</a> | all rights reserved!
+    </div>
+</body>
+
+</html>

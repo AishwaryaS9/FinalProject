@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Wise</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <!-- header section start -->
+    <header>
+        <div id="menu" class="fas fa-bars"></div>
+        <% if(auth==="logged" ){ %>
+        <nav class="navbar">
+            <a class="navbarlogo"href="/">
+                <img src="images/logo.png">
+            </a>
+            <a aria-current="page" href="/">Home</a>
+            <a href="/userprofile">Profile</a>
+            <a href="/task">Add task</a>
+            <a href="/course">your courses</a>
+            <a href="/logout">Logout</a>
+            <% } else { %>
+            <nav class="navbar">
+                <img src="/images/logo.png">
+            </nav>
+            <a href="/login" target="" class="loginbtn">Login</a>
+            <a href="/register" target="" class="btn">Sign Up</a>
+            <% } %>
+            <div class="scroll-bar"></div>
+
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+
+
+        <div class="content">
+            <h3 class="name">Internship <span>Training Program</span></h3>
+            <p>Intern with us, Get ahead of the rest</p>
+            <% if(auth !="logged" ){ %>
+            <a href="/register" class="btn">Register for Free</a>
+            <% } %>
+        </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+
+        <div class="row">
+            <div class="column">
+
+                <h3 class="title">Increase your marketability and experience.</h3>
+                <div class="box">
+                    <h3>An internship not only gives you an advantage over your peers, but it also prepares you for what
+                        an engineer must expect in your chosen industry and creates confidence.</h3>>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="title">Build your Resume</h3>
+                <div class="box">
+                    <h3>Even entry-level positions demand some level of expertise, which is where your internship
+                        experience comes in handy. Internships provide you the chance to receive daily input from
+                        someone who works in your intended field.</h3>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column">
+                <h3 class="title">Develop a diverse collection of skills.</h3>
+                <div class="box">
+                    <h3>Maybe you already possess the excellent interpersonal skills that companies demand. However, you
+                        can't help but sharpen them during an internship by interacting with people on a professional
+                        level and in ways that you wouldn't get the chance to do in a classroom. Employers value
+                        teamwork, communication, leadership, and problem-solving abilities just as much.</h3>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="title">Industry Certification</h3>
+                <div class="box">
+                    <h3>Get internship and training certificates to differentiate yourself on your CV for college
+                        placements.</h3>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <%- include('partials/footer'); -%>
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

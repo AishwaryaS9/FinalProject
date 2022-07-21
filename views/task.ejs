@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Learner Wise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a class="navbarlogo" href="/userprofile">
+                <img src="images/logo.png">
+            </a>
+            <a aria-current="page" href="/">Home</a>
+            <a href="/userprofile">Profile</a>
+            <a href="/task">Add task</a>
+            <a href="/course">your courses</a>
+            <a href="/logout">Logout</a>
+            <div class="scroll-bar"></div>
+        </nav>
+
+    </header>
+
+    <div class="task-container"  style="margin-top:5rem">
+
+        <form action="/task" method="POST">
+
+            <input type="text" name="content" class="box" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Task" />
+
+            <input type="checkbox" id="exampleCheck1" name="comp">
+            <label for="exampleCheck1" class="label-checkbox">Mark as Completed</label>
+            <br />
+            <div class="center">
+                <button class="btn" type="submit">Add Task</button>
+            </div>
+        </form>
+        <div class="row">
+            <div class="column">
+                <div class="box">
+                    <% Tasks.forEach(details=> { %>
+
+                    <ul class="color-with-marker">
+                        <li> <%= details.content %>
+                            &nbsp;Status:&nbsp;
+                            <%= details.iscomplete %>
+                            <a href="task/edit/<%= details._id %>" class="edit">
+                                Edit
+                            </a>
+                            <a href="/task/remove/<%= details._id %>" class="delete">
+                                Delete
+                            </a>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

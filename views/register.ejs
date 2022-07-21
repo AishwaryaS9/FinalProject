@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- header section start -->
+    <header>
+        <nav class="navbar">
+            <a href="/">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+        <div class="scroll-bar"></div>
+    </header>
+    <!-- header section ends -->
+
+    <!--Login section starts-->
+    <div class="login-container">
+        <form action="/register" method="POST" style="margin-top:5rem">
+            <div class="center">
+                <h1>Sign Up</h1>
+            </div>
+            <i class="far fa-user"></i>
+            <input type="text" placeholder="Full Name" class="box" name="fullname" id="fullname" required>
+            <input type="text" placeholder="Username" class="box" name="username" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required>
+            <input type="email" name="email" id="exampleFormControlInput1" placeholder="Email" required class="box">
+            <input type="password" name="password" class="box" id="exampleInputPassword1" placeholder="Password"
+                required>
+            <input type="text" name="phone" class="box" id="exampleFormControlInput2" placeholder="Contact No" required>
+            <label for="image" style="font-size: 16px;">Upload File:</label>
+            <input type="file" name="image" required />
+            <div class="image error"></div>
+            <div class="center">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+    </div>
+    <!-- Login section ends -->
+
+    <div class="footer">
+        created by <a href="#">Aishwarya</a> | all rights reserved!
+    </div>
+
+     <!-- custom js file link  -->
+     <script src="js/script.js"></script>
+</body>
+
+</html>

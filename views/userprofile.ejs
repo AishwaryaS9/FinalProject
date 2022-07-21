@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Learner Wise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a class="navbarlogo" href="/userprofile">
+                <img src="images/logo.png">
+            </a>
+            <a aria-current="page" href="/">Home</a>
+            <a href="/userprofile">Profile</a>
+            <a href="/task">Add task</a>
+            <a href="/course">your courses</a>
+            <a href="/logout">Logout</a>
+            <div class="scroll-bar"></div>
+        </nav>
+
+
+    </header>
+
+    <div class="userprofile-container">
+
+        <!-- <img src="images/<%= userdetails.image %>" style="width: 25rem; height: 25rem;" /> -->
+
+        <form action="/edit/<%= userdetails._id %>" method="POST">
+            <i class="far fa-edit"></i>
+            <h2>Edit Details</h2>
+            <input type="text" value="<%= userdetails.fullname %>" id="exampleInputEmail1" class="box">
+
+
+            <input type="text" readonly value="<%= userdetails.username %>" id="exampleInputEmail1" class="box">
+
+            <input type="text" value="<%= userdetails.password %>" id="exampleInputEmail1" class="box">
+
+            <input type="email" value="<%= userdetails.email %>" name="email" id="exampleFormControlInput1" class="box">
+
+            <input type="text" value="<%= userdetails.phone %>" name="phone" id="exampleFormControlInput2" class="box">
+            
+            <input type="file" name="image" " value=" <%= userdetails.image%>" id="imagecontrol" class="box" />
+            <button class="btn" type="submit">Edit Details</button>
+
+        </form>
+    </div>
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
